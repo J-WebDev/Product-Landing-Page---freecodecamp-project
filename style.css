@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
+
+html {
+    scroll-behavior: smooth;
+  }
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Dosis', sans-serif;
+    background-color: #eee;
+    color: rgb(12, 12, 12);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a  {
+    text-decoration: none;
+    color: rgb(12, 12, 12);
+}
+
+ul {
+    list-style: none;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    margin-top: 10px;
+    width: 150px;
+    padding: 5px;
+    font-size: 1rem;
+    font-weight: 900;
+    border: 0;
+    background-color: gold;
+    text-transform: uppercase;
+}
+
+/* main area */
+
+main {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* header */
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    min-height: 75px;
+    padding: 0px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eee;
+}
+  
+.logo {
+    height: 50px;
+}
+
+.ul-wrapper ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.ul-wrapper ul li {
+    margin-left: 1rem;
+    margin-right: 3rem;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+
+/* email */
+.email-address form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 120px;
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: 900;
+}
+
+.email-address input[type="email"] {
+    width: 300px;
+    height: 38px;
+    font-size: 1rem;
+    padding: 5px;
+}
+
+
+/* Service Section */
+.service-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column; 
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.service-infos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 90%;
+}
+
+.fire {
+    margin-left: 5px;
+}
+
+.service-wrapper h2 {
+    font-size: 26px;
+}
+
+.service-wrapper p {
+    font-size: 19px;
+    font-weight: 500;
+}
+
+.service-infos i {
+    color: rgb(221, 191, 21);
+    margin-right: 50px;
+}
+
+/* Video */
+.video-wrapper #video{
+    height: 60vh;
+    width: 50vw;
+}
+
+/* Cards */
+.cards-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 6%;
+    grid-gap: 25px;
+}
+
+.cards-wrapper .card {
+    text-align: center; 
+    border: 1px solid black;
+}
+
+.cards-wrapper .card p {
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 2;
+    width: 60%;
+}
+
+
+.card .card-title h2 {
+    padding-top: 8px;
+    margin-top: 0;
+    background-color: rgb(221, 221, 221);
+    height: 50px;
+}
+
+.card-btn {
+    font-weight: 500;
+    height: 40px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+} 
+
+/* Footer */
+footer {
+    width: 90%;  
+    background-color:  rgb(221, 221, 221);  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 15px;
+}
+
+footer p {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 18px;
+}
+
+footer ul {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+footer ul li {
+    margin-left: 15px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+@media (max-width: 950px) {
+    header {
+        flex-direction: column;
+    }
+
+    .ul-wrapper ul {
+        display: block;
+        text-align: center;
+    }
+    .email-address form {
+        margin-top: 150px;
+    }
+}
+
+@media (max-width: 500px){
+    body {
+        overflow-x: hidden;
+    }
+
+    header {
+        background-color: rgb(221, 220, 218);
+    }
+
+    .ul-wrapper ul {
+        display: flex;
+        margin-top: 0;
+        
+    }
+
+    .ul-wrapper ul li {
+        font-size: 16px;
+        margin-left: 0;
+        margin-right: 1rem;
+    }
+
+    .email-address form {
+        margin-top: 75px;
+    }
+
+    .service-wrapper { 
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    footer {
+        width: 100%;
+    }
+    
+    .cards-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 400px) {
+    form h1 {
+        font-size: 24px;
+    }
+    .email-address input[type="email"] {
+        width: 260px;
+        height: 34px;
+    }
+
+    .email-address input[type="submit"] {
+        height: 30px;
+    } 
+
+    .service-wrapper .service-infos{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .service-wrapper .service-infos i {
+        display: none;
+    }
+
+    .video-wrapper #video{
+        height: 50vh;
+        width: 90vw;
+    }
+
+    .cards-wrapper {
+        display: flex;
+        
+        padding: 6%;
+        grid-gap: 10px;
+    }
+    
+    footer p {
+        font-size: 16px;
+    }
+}
